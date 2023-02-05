@@ -67,4 +67,61 @@ from order_items
 where order_id = 6 and unit_price * quantity > 30;
 
 
+select *
+from customers
+where state in ("VA", "GA", "FL");
+
+select *
+from customers
+where state not in ("VA", "GA", "FL");
+
+
+select *
+from products
+where quantity_in_stock in (49, 38, 72);
+
+select *
+from customers
+where points between 1000 and 3000;
+
+
+select *
+from customers
+where birth_date between "1990-01-01" and "2000-01-01";
+
+select *
+from customers
+where last_name like "%b%";
+
+select *
+from customers
+where last_name like "%y";
+
+select *
+from customers
+where last_name like "_____y";
+
+select *
+from customers
+where last_name like "b____y";
+
+select *
+from customers
+where address like "%trail%" or
+	  address like "%avenue%";
+
+select *
+from customers
+where phone like "%9";
+
+select *
+from customers
+where phone not like "%9";
+
+
+
+
+
+
+
 
