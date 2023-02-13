@@ -118,7 +118,9 @@ select *
 from customers
 where phone not like "%9";
 
-
+select *
+from customers
+where points > 3000;
 
 
 
