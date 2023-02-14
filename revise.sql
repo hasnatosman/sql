@@ -122,6 +122,57 @@ select *
 from customers
 where points > 3000;
 
+select *
+from customers
+where state = "VA";
+
+select *
+from customers
+where state <> "VA";
+
+select *
+from customers
+where birth_date > "1990-01-01";
+
+select *
+from orders
+where order_date >= "2019-01-01";
+
+
+select *
+from customers
+where state in ("VA", "FL", "GA");
+
+select *
+from customers
+where state not in ("VA", "FL", "GA");
+
+select *
+from products
+where quantity_in_stock in (49, 38, 72);
+
+
+select *
+from customers
+where points between  1000 and 3000;
+
+select *
+from customers
+where birth_date between "1990-01-01" and "2000-01-01";
+
+select *
+from customers
+where last_name like "b%";
+
+select *
+from customers
+where last_name like "%b%";
+
+select *
+from customers
+where last_name like "_____Y";
+
+
 
 
 

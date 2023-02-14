@@ -94,3 +94,5 @@ from employees
 group by dept
 having avg(salary) > 50000;
 
+
+
