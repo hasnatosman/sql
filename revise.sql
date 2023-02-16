@@ -172,8 +172,68 @@ select *
 from customers
 where last_name like "_____Y";
 
+use sql_store;
+
+select *
+from customers
+where last_name like "%field%";
 
 
+select *
+from customers
+where last_name regexp "field";
+
+select *
+from customers
+where last_name regexp "^field";
+
+
+select *
+from customers
+where last_name regexp "field|mac|rose";
+
+select *
+from customers
+where last_name regexp "field$";
+select *
+from customers
+where last_name regexp "^field";
+
+
+select *
+from customers
+where last_name regexp '[gim]e';
+
+select *
+from customers
+where last_name regexp '[a-h]i';
+
+-- ...................................exercise...................
+
+-- get the customers whose
+--  first names are elka or ambur
+
+select*
+from customers
+where first_name regexp 'elka|ambur';
+
+-- last names end with EY or ON
+select *
+from customers
+where last_name regexp 'EY$|ON$';
+
+
+-- last names start with MY or contains SE 
+
+select *
+from customers
+where last_name regexp '^my|se';
+
+-- last names contains B followed by R or U
+
+select *
+from customers
+where last_name regexp '[b]r|u'; 
 
 
 
