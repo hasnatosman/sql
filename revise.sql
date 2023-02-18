@@ -264,6 +264,35 @@ from customers
 limit 2, 3;
 
 
+select *
+from orders
+inner join customers on orders.customer_id = customers.customer_id;
+
+select order_id, orders.customer_id, first_name, last_name
+from orders
+join customers on orders.customer_id = customers.customer_id;
+
+select order_id, o.customer_id, first_name, last_name
+from orders as o
+join customers as c on o.customer_id = c.customer_id;
+
+select *
+from orders o
+join customers c on o.customer_id = c.customer_id
+join order_statuses os on o.status = os.order_status_id;
+
+select
+	o.order_id,
+	o.order_date,
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    os.name as status
+
+from orders as o
+join customers as c on o.customer_id = c.customer_id
+join order_statuses as os on o.status = os.order_status_id; 
+
 
 
 
