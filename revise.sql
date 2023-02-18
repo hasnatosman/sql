@@ -237,4 +237,34 @@ where last_name regexp '[b]r|u';
 
 
 
+select *
+from customers
+where phone is null;
+
+select *
+from customers
+where phone is not null;
+
+use sql_store;
+
+select *
+from customers
+order by first_name desc;
+
+select * 
+from customers
+order by state desc, first_name desc;
+
+select *
+from customers
+limit 5;
+
+select *
+from customers
+limit 2, 3;
+
+
+
+
+
 
