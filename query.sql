@@ -38,3 +38,34 @@ select
     
 from order_items as oi
 join products as p on oi.product_id = p.product_id;
+
+-- JOINING ACROSS DATABASES --------------------------------------------------------
+
+select *
+from order_items as OI
+join sql_inventory.products as p on oi.product_id = p.product_id;
+
+use sql_inventory;
+
+select *
+from sql_store.order_items OI
+join products as p on oi.product_id = p.product_id;
+
+-- SELF JOIN -----------------------------------------------------------------
+
+use sql_hr;
+
+select *
+from employees e
+join employees m on e.reports_to = m.employee_id;
+
+select
+	 e.employee_id,
+     e.first_name,
+     e.last_name,
+     m.first_name as manager
+	
+from employees as e
+join employees as m on e.reports_to = m.employee_id;
+     
+     
