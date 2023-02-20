@@ -297,3 +297,15 @@ join order_statuses as os on o.status = os.order_status_id;
 
 
 
+
+
+use sql_store;
+
+
+select *
+from orders;
+
+
+
+
+
