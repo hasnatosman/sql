@@ -67,5 +67,39 @@ select
 	
 from employees as e
 join employees as m on e.reports_to = m.employee_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+use sql_store;
+
+
+
+
+
+
+
+
+
+
      
      
